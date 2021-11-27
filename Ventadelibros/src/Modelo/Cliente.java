@@ -12,18 +12,30 @@ import java.util.ArrayList;
  * @author LENOVO LEGION
  */
 public class Cliente {
+    private int id;
     private String nombre;
     private String cedula;
     private String direccion;
     private double credito;
 
-    public Cliente(String nombre, String cedula, String direccion, double credito) {
+    public Cliente(int id,String nombre, String cedula, String direccion, double credito) {
+        this.id=id;
         this.nombre = nombre;
         this.cedula = cedula;
         this.direccion = direccion;
         this.credito = credito;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+     
+    
+    
     public String getNombre() {
         return nombre;
     }
@@ -56,21 +68,6 @@ public class Cliente {
         this.credito = credito;
     }
     
-    private ArrayList<Cliente> clientes;
-    public Cliente(){
-        clientes = new ArrayList<>();
-    }
     
-    public void agregarclientes(String nombre, String cedula,String direccion,double credito){
-        Cliente nuevo=new Cliente(nombre, cedula, direccion, credito);
-        clientes.add(nuevo);
-    }
-    public void visualizarclientes(){
-        System.out.println("clientes");
-        for (int i=0; i<clientes.size();i++) {
-            
-            System.out.println(clientes.get(i).getNombre()+" , "+clientes.get(i).getCedula()+" , "+clientes.get(i).getDireccion());
-        }
-    }
     
 }

@@ -12,20 +12,60 @@ import java.util.ArrayList;
  * @author LENOVO LEGION
  */
 public class Compra {
-    private ArrayList<Cliente> clientes;
-    public Compra(){
-        clientes = new ArrayList<>();
+    private int id;
+    private String fecha;
+    private int libdigitalid;
+    private int libimpredoid;
+    private int clienteid;
+
+    public Compra(int id, String fecha, int libdigitalid, int libimpredoid, int clienteid) {
+        this.id = id;
+        this.fecha = fecha;
+        this.libdigitalid = libdigitalid;
+        this.libimpredoid = libimpredoid;
+        this.clienteid = clienteid;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getLibdigitalid() {
+        return libdigitalid;
+    }
+
+    public void setLibdigitalid(int libdigitalid) {
+        this.libdigitalid = libdigitalid;
+    }
+
+    public int getLibimpredoid() {
+        return libimpredoid;
+    }
+
+    public void setLibimpredoid(int libimpredoid) {
+        this.libimpredoid = libimpredoid;
+    }
+
+    public int getClienteid() {
+        return clienteid;
+    }
+
+    public void setClienteid(int clienteid) {
+        this.clienteid = clienteid;
+    }
+
+  
     
-    public void agregarclientes(String nombre, String cedula,String direccion,double credito){
-        Cliente nuevo=new Cliente(nombre, cedula, direccion, credito);
-        clientes.add(nuevo);
-    }
-    public void visualizarclientes(){
-        System.out.println("clientes");
-        for (int i=0; i<clientes.size();i++) {
-            
-            System.out.println(clientes.get(i).getNombre()+" , "+clientes.get(i).getCedula()+" , "+clientes.get(i).getDireccion());
-        }
-    }
-}
+} 
